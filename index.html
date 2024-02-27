@@ -12,6 +12,7 @@
             height: 100vh;
             width: 100vw;
             background-color: #2C28E1;
+        }
 
         .video-container {
             position: absolute;
@@ -35,8 +36,21 @@
 
 
         }
+
+        .color-picker {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            height: 60px;
+            width: 60px;
+            margin: 50px;
+            cursor: pointer;
+            z-index: 100;
+        }
     </style>
 </head>
+
 <body>
     <div class="solid-background">
         <div class="video-container">
@@ -45,5 +59,28 @@
             </video>
         </div>
     </div>
+
+    <input type="color" class="color-picker" id="colorPicker">
+
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        const solidBackground = document.querySelector('.solid-background');
+
+        colorPicker.addEventListener('input', () => {
+            solidBackground.style.backgroundColor = colorPicker.value;
+        });
+    </script>
 </body>
+
+</html>
+
+<div class="solid-background">
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="./datamosh-wallstreet.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+</body>
+
 </html>
