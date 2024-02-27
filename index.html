@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nett.datamosh</title>
+    <style>
+        body {
+            margin: 0 auto
+        }
+        .solid-background {
+            height: 100vh;
+            width: 100vw;
+            background-color: #2C28E1;
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transform-origin: center center;
+        }
+
+        .video-container video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: scale(1.8);
+            transform-origin: center center;
+            mix-blend-mode: pass-through;
+            filter: saturate(0%);
+            opacity: 0.5;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="solid-background">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="./datamosh-wallstreet.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</body>
+</html>
