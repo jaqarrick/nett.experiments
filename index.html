@@ -48,6 +48,18 @@
             cursor: pointer;
             z-index: 100;
         }
+
+        .logo-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            mix-blend-mode: color-dodge;
+        }
     </style>
 </head>
 
@@ -57,6 +69,9 @@
             <video autoplay muted loop>
                 <source src="./datamosh-wallstreet.mp4" type="video/mp4">
             </video>
+        </div>
+        <div class="logo-container">
+            <img src="./nett-logo.png" alt="nett-logo">
         </div>
     </div>
 
